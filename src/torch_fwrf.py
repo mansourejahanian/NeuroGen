@@ -200,8 +200,8 @@ def learn_params_ridge_regression(data, voxels, _fmaps_fn, models, lambdas, aper
     print ('---------------------------------------')
     #############################################################################        
     ### Create full model value buffers    
-    best_models = np.full(shape=(nv,), fill_value=-1, dtype=np.int)   
-    best_lambdas = np.full(shape=(nv,), fill_value=-1, dtype=np.int)
+    best_models = np.full(shape=(nv,), fill_value=-1, dtype=int)   
+    best_lambdas = np.full(shape=(nv,), fill_value=-1, dtype=int)
     best_losses = np.full(fill_value=np.inf, shape=(nv), dtype=dtype)
     best_w_params = np.zeros(shape=(nv, nf), dtype=dtype)
     if add_bias: # add bias to the parameters
